@@ -1,0 +1,42 @@
+<!-- templates/location.html -->
+<!doctype html>
+<html>
+<head>
+    <title>Shuttle Location Display</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>shuttle's position</h1>
+    <div>
+        <p>longitude: <span id="longitude">getting the position...</span></p>
+        <p>latitude: <span id="latitude">getting the position...</span></p>
+    </div>
+
+    <script>
+        //
+        function updateShuttleLocation() {
+            fetch('/getCurrentLocation')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.latitude && data.longitude) {
+                        // update it
+                        document.getElementById('longitude').innerText = data.longitude;
+                        document.getElementById('latitude').innerText = data.latitude;
+                    } else {
+                        document.getElementById('longitude').innerText = "data unavailable";
+                        document.getElementById('latitude').innerText = "data unavailable";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching shuttle location:', error);
+                    document.getElementById('longitude').innerText = "fail";
+                    document.getElementById('latitude').innerText = "fail";
+                });
+        }
+
+        // update per second
+        setInterval(updateShuttleLocation, 1000);
+    </script>
+</body>
+</html>

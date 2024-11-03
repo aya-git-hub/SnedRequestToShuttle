@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html>
+    <head>
+        <title>Easy Student APP</title>
+    </head>
+    <body>
+        <h1>Request for shuttle</h1>
+        <form action="/send_request" method="post">
+            <label for="suid">Input your SUID:</label>
+            <input type="text" id="suid" name="suid" required>
+            <button type="submit">send</button>
+        </form>
+        <h1>Welcome to the Evening Shuttle Tracking System</h1>
+            <p>You can see the location</p>
+    <!-- go to /location-->
+            <a href="/location">location</a>
+    </body>
+</html>

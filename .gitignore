@@ -1,0 +1,62 @@
+# created by virtualenv automatically
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Virtual environments
+.vscode/
+.pipenv/
+.tox/
+.nox/
+
+# PyInstaller
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.cache/
+coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# macOS
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS C
