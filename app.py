@@ -13,7 +13,7 @@ current_location = {"longitude": None, "latitude": None}
 @app.route('/shuttleLocation', methods=['GET'])
 def shuttle_location():
     global current_location
-    # 获取请求参数
+    # get the request number
     longitude = request.args.get('longitude')
     latitude = request.args.get('latitude')
 

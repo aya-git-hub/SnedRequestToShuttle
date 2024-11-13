@@ -8,10 +8,10 @@ def sendGetOn(id,address):
     }
 
     try:
-        # 发送 GET 请求
+        # Send GET request
         response = requests.get(url, params=params)
 
-        # 检查响应状态码并打印结果
+        # Check the status code
         if response.status_code == 200:
             print("Passenger added successfully:", response.text)
         else:
